@@ -12,8 +12,8 @@
         android:layout_width="133dp"
         android:layout_height="101dp"
         android:gravity="center"
-        android:text="0"
-        android:textSize="60dp"
+        android:text="@string/count"
+        android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/resetBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,23 +23,48 @@
         android:id="@+id/resetBtn"
         android:layout_width="117dp"
         android:layout_height="59dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginBottom="250dp"
         android:text="Reset"
-        app:layout_constraintBottom_toTopOf="@+id/countBtn"
+        app:layout_constraintBottom_toTopOf="@+id/countBtnUp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/countBtn"
-        android:layout_width="117dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="170dp"
-        android:text="Count"
+    <ImageButton
+        android:id="@+id/countBtnUp"
+        android:layout_width="116dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#060505"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn"
+        app:layout_constraintVertical_bias="1.0"
+        tools:src="@android:drawable/arrow_up_float" />
 
+    <ImageButton
+        android:id="@+id/countBtnDown"
+        android:layout_width="116dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/app_name"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#060505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countBtnUp"
+        app:layout_constraintVertical_bias="0.432"
+        tools:src="@android:drawable/arrow_down_float" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
